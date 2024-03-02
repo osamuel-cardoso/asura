@@ -1,6 +1,6 @@
+import { useQuery } from "@tanstack/react-query"
 import React, { createContext } from "react"
 import { WEATHER_URL } from "../services/weatherApi"
-import { useQuery } from "@tanstack/react-query"
 
 interface weatherContext {
     weatherResponse: object
@@ -9,10 +9,7 @@ interface weatherContext {
 }
 
 export const weatherContext = createContext<weatherContext>({
-    weatherResponse: {},
-    temp: "",
-    isSuccess: false,
-})
+} as weatherContext)
 
 export function WeatherContextProvider({
     children,
